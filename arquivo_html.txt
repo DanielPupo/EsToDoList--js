@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EsToDoList</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /* Estilos básicos para a fonte/background, imitando o wireframe */
+      body {
+        font-family: "Comic Sans MS", cursive, sans-serif; /* Tentativa de imitar o estilo desenhado */
+        background-color: #f0f0f0;
+      }
+      /* Classe para simular o traço em tarefas concluídas */
+      .concluida .tarefa-texto {
+        text-decoration: line-through;
+        color: #9ca3af; /* gray-400 */
+      }
+    </style>
+  </head>
+
+  <body class="flex justify-center items-start pt-12 min-h-screen bg-gray-100">
+    <div
+      class="w-full max-w-sm lg:max-w-lg p-6 bg-white border border-gray-300 rounded-lg shadow-xl"
+    >
+      <h1
+        class="text-3xl font-bold text-center mb-6 text-green-600"
+        style="font-family: 'Comic Sans MS', cursive, sans-serif"
+      >
+        EsToDoList
+      </h1>
+
+      <div class="flex mb-6 space-x-2">
+        <input
+          type="text"
+          id="nova-tarefa-input"
+          placeholder="Digite uma tarefa..."
+          class="flex-grow p-3 border border-gray-400 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+        <button
+          id="adicionar-btn"
+          class="flex-shrink-0 w-12 h-12 bg-green-500 hover:bg-green-600 text-white text-2xl font-bold rounded-lg transition duration-150 ease-in-out shadow-md"
+        >
+          +
+        </button>
+      </div>
+
+      <ul id="lista-de-tarefas" class="space-y-3">
+        <!-- Aqui serão carregadas as tarefas que forem salvas pelo usuário -->
+      </ul>
+
+      <hr class="my-6 border-gray-300" />
+
+      <div class="flex items-center space-x-3">
+        <div class="relative flex-grow">
+          <input
+            type="text"
+            id="pesquisa-input"
+            placeholder="🔍 Pesquise ..."
+            class="w-full p-3 pl-10 border border-gray-400 rounded-lg text-gray-700 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <span
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+          ></span>
+        </div>
+
+        <select
+          id="filtro-select"
+          class="p-3 border border-gray-400 rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          <option value="todos">Todos</option>
+          <option value="ativos">Ativos</option>
+          <option value="concluidos">Concluídos</option>
+        </select>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
