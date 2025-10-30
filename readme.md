@@ -1,4 +1,4 @@
-# [Nome do seu Projeto]
+# EsToDoList
 
 Uma aplicação simples e intuitiva de To-Do List desenvolvida para praticar e consolidar fundamentos de desenvolvimento front-end utilizando HTML, estilização moderna com Tailwind CSS e manipulação de estado com JavaScript e `localStorage`.
 
